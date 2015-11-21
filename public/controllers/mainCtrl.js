@@ -131,6 +131,8 @@ controller('mainCtrl',['$scope','$location','productService','$rootScope',
 
 
     $scope.sortproduct=function () {
+    	var sortingElement = document.getElementById('sorting');
+        $scope.sort = sortingElement.options[sortingElement.selectedIndex].label;
         switch($scope.sort){
             case 'Name':
                $scope.orderby='name';
